@@ -3,3 +3,5 @@ install/
 */*/build
 extra/luafilesystem/lfs.so
 win-files/3rd/
+.idea
+cmake-build*

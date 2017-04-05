@@ -9,6 +9,8 @@ set(LUA ${LUA_BINDIR}/lua)
 
 ADD_SUBDIRECTORY(exe)
 
+set(WITH_LUAROCKS OFF)
+
 # If this variable is defined, a pure cmake build is done end-to-end with no luarocks
 #IF (WITH_LUAROCKS STREQUAL OFF)
 
@@ -85,5 +87,4 @@ ADD_SUBDIRECTORY(exe)
   # Finally add the two directories
   ADD_SUBDIRECTORY(pkg)
   ADD_SUBDIRECTORY(extra)
-
 #ENDIF (WITH_LUAROCKS STREQUAL OFF)
