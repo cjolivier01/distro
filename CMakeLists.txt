@@ -1,5 +1,14 @@
 cmake_minimum_required(VERSION 2.8)
+set(CMAKE_INSTALL_PREFIX  /home/coolivie/src/Torch/distro/install)
+set(CMAKE_MODULE_PATH /home/coolivie/src/Torch/distro/install/share/cmake/torch;${CMAKE_MODULE_PATH})
+set(LIBRARY_OUTPUT_PATH /home/coolivie/src/Torch/distro/install/lib)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_INSTALL_PREFIX}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${CMAKE_INSTALL_PREFIX}/bin)
+
 ADD_SUBDIRECTORY(exe)
+
+set(WITH_LUAROCKS OFF)
 
 # If this variable is defined, a pure cmake build is done end-to-end with no luarocks
 IF (WITH_LUAROCKS STREQUAL OFF)
@@ -76,5 +85,4 @@ IF (WITH_LUAROCKS STREQUAL OFF)
   # Finally add the two directories
   ADD_SUBDIRECTORY(pkg)
   ADD_SUBDIRECTORY(extra)
-
 ENDIF (WITH_LUAROCKS STREQUAL OFF)
