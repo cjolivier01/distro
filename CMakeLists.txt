@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(LUADIR ${CMAKE_SOURCE_DIR}/install)
+set(LUADIR ${CMAKE_CURRENT_SOURCE_DIR}/install)
 set(LUA_INCDIR ${LUADIR}/include)
 set(LUA_LIBDIR ${LUADIR}/lib)
 set(LUA_BINDIR ${LUADIR}/bin)
