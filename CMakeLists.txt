@@ -9,7 +9,7 @@ set(LUA ${LUA_BINDIR}/lua)
 
 ADD_SUBDIRECTORY(exe)
 
-set(WITH_LUAROCKS OFF)
+set(WITH_LUAROCKS "OFF")
 
 # If this variable is defined, a pure cmake build is done end-to-end with no luarocks
 #IF (WITH_LUAROCKS STREQUAL OFF)
